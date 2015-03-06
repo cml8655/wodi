@@ -1,0 +1,56 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="CustomBaseTheme" parent="Theme.AppCompat.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <style name="CustomTheme" parent="CustomBaseTheme">
+        <item name="android:windowTitleSize">40dp</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="CustomTheme.NoTitleBar" parent="CustomTheme">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomTheme.NoTitleBar.Fullscreen" parent="CustomTheme.NoTitleBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="ActionBarStyle.App" parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="background">@drawable/topbar</item>
+        <item name="android:background">@drawable/topbar</item>
+    </style>
+
+    <style name="CustomTheme.ActionBar" parent="@style/Theme.AppCompat.Light">
+        <item name="actionBarStyle">@style/ActionBarStyle.App</item>
+        <item name="homeAsUpIndicator">@drawable/actionbar_menu</item>
+        <item name="selectableItemBackground">@drawable/actionbar_item_background</item>
+    </style>
+
+    <style name="CustomTheme.ActionBar.Modal" parent="CustomTheme.ActionBar">
+        <item name="android:windowAnimationStyle">@style/defaultAnimation</item>
+    </style>
+
+    <style name="defaultAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/upgrade</item>
+        <item name="android:activityOpenExitAnimation">@android:anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/fall</item>
+    </style>
+
+    <style name="CustomTheme.ActionBar.Fullscreen" parent="@style/CustomTheme.ActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+</resources>

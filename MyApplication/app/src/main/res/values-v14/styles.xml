@@ -1,0 +1,40 @@
+<resources>
+
+    <!--
+        Base application theme for API 14+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 14+ devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- API 14 theme customizations can go here. -->
+    </style>
+
+    <style name="CustomTheme.ActionBar" parent="@style/Theme.AppCompat.Light">
+        <item name="actionBarStyle">@style/ActionBarStyle.App</item>
+        <item name="android:actionBarStyle">@style/ActionBarStyle.App</item>
+        <item name="selectableItemBackground">@drawable/actionbar_item_background</item>
+        <item name="android:selectableItemBackground">@drawable/actionbar_item_background</item>
+    </style>
+
+    <style name="CustomTheme.ActionBar.Fullscreen" parent="@style/CustomTheme.ActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="ActionBarStyle.App" parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="android:background">@drawable/topbar</item>
+        <item name="background">@drawable/topbar</item>
+        <item name="homeAsUpIndicator">@drawable/actionbar_menu</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="indeterminateProgressStyle">@style/ActionBarStyle.IndeterminateProgressBar</item>
+        <item name="android:indeterminateProgressStyle">@style/ActionBarStyle.IndeterminateProgressBar</item>
+    </style>
+
+    <style name="ActionBarStyle.IndeterminateProgressBar" parent="@style/Widget.AppCompat.ProgressBar">
+        <item name="android:minWidth">@dimen/abc_indeterminate_progress_size</item>
+        <item name="android:maxWidth">@dimen/abc_indeterminate_progress_size</item>
+        <item name="android:minHeight">@dimen/indeterminate_progress_size</item>
+        <item name="android:maxHeight">@dimen/indeterminate_progress_size</item>
+    </style>
+
+</resources>
