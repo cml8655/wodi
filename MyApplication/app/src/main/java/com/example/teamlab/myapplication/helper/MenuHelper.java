@@ -67,8 +67,8 @@ public class MenuHelper {
             return;
         }
 
-        if (null != selectedMenu) {
-            selectedMenu.getMenu().setSelected(false);
+        for (Menu menus : Menu.values()) {
+            menus.getMenu().setSelected(false);
         }
         menu.getMenu().setSelected(true);
 

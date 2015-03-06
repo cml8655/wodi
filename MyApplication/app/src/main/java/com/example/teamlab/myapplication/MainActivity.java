@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.view.Window;
 
 import com.example.teamlab.myapplication.activity.BaseSlidingActionBarActivity;
+import com.example.teamlab.myapplication.constant.Constant;
 import com.example.teamlab.myapplication.fragment.MenuFragment;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
@@ -18,7 +19,7 @@ public class MainActivity extends BaseSlidingActionBarActivity {
         setContentView(R.layout.activity_main);
         initSlidingMenu();
         setCircleProgressbar(true);
-        setActionBarTitle("哈哈哈");
+        setActionBarTitle( Constant.TEST+"啊");
     }
 
     /**

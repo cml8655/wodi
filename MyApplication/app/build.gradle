@@ -4,6 +4,10 @@ android {
     compileSdkVersion 21
     buildToolsVersion "19.1.0"
 
+    lintOptions {
+        abortOnError false
+    }
+
     defaultConfig {
         applicationId "com.example.teamlab.myapplication"
         minSdkVersion 9
@@ -11,11 +15,50 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    signingConfigs {
+        debug {
+            storeFile file("src/main/keystore/debug.keystore")
+            storePassword "android"
+            keyPassword "android"
+        }
+        release {
+            storeFile file("src/main/keystore/debug.keystore")
+            storePassword "android"
+            keyPassword "android"
+        }
+        staging {
+            storeFile file("src/main/keystore/debug.keystore")
+            storePassword "android"
+            keyPassword "android"
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+        dev {
+            applicationId 'com.example.teamlab.myapplication.dev'
+            signingConfig signingConfigs.debug
+        }
+        staging {
+            signingConfig signingConfigs.debug
+            applicationId 'com.example.teamlab.myapplication.staging'
+        }
+        product {
+            applicationId 'com.example.teamlab.myapplication'
+            signingConfig signingConfigs.debug
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
     }
 }
 
@@ -25,5 +68,11 @@ dependencies {
     compile 'com.android.support:support-v4:21.+'
     compile 'cn.pedant.sweetalert:library:1.3'
     compile 'com.mcxiaoke.volley:library:1.0.+'
+    androidTestCompile 'junit:junit:4.10'
+    androidTestCompile 'org.robolectric:robolectric:2.3+'
+    androidTestCompile 'com.squareup:fest-android:1.0.+'
     compile project(':slidingmenu')
 }
+
+
+
