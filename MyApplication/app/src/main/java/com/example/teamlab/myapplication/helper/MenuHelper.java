@@ -78,7 +78,7 @@ public class MenuHelper {
 
         if (null == fragment) {
             fragment = Fragment.instantiate(context, menu.getMenu().getClassName());
-            transaction.add(R.id.content_frame, fragment, menu.name());
+//            transaction.add(R.id.content_frame, fragment, menu.name());
         } else if (!fragment.isAdded()) {
             transaction.add(fragment, menu.name());
         }
