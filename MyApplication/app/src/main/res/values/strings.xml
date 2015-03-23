@@ -8,4 +8,5 @@
     <string name="system_exit_confirm">确认退出？</string>
     <string name="confirm">确定</string>
     <string name="cancel">取消</string>
+    <string name="search_hint">点击搜索</string>
 </resources>
