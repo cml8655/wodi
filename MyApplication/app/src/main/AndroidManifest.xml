@@ -37,7 +37,6 @@
 
         <provider
             android:authorities="com.cml.wodi.provider.user.relation"
-            android:exported="false"
             android:name=".provider.UserRelationProvicer" />
     </application>
 
