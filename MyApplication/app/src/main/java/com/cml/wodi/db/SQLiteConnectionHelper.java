@@ -46,10 +46,6 @@ public class SQLiteConnectionHelper extends SQLiteOpenHelper {
         try {
             int versionCode = mContext.getPackageManager().getPackageInfo(
                     "cn.com.lawson", PackageManager.GET_CONFIGURATIONS).versionCode;
-            if (versionCode == 6) {
-                // 创建db的时候如果Code=6 则可能是从ph1的code 5升级过来的 所以要清除ph1的用户信息
-//				AccountUtil.clearAccountData(mContext);
-            }
             Log.d(TAG, "versionCode:" + versionCode);
         } catch (NameNotFoundException e) {
             Log.d(TAG, "NameNotFoundException:", e);

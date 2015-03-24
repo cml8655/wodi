@@ -10,5 +10,6 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         // set the content view
         setContentView(R.layout.activity_main);
+        onSearchRequested();
     }
 }
