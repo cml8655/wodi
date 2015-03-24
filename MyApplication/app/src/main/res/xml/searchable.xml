@@ -2,5 +2,5 @@
 <searchable xmlns:android="http://schemas.android.com/apk/res/android"
     android:label="@string/action_settings"
     android:hint="@string/search_hint"
-    android:searchSuggestAuthority="com.cml.wodi.provider.user.relation">
-</searchable>
+    android:includeInGlobalSearch="true"
+    android:searchSuggestAuthority="com.cml.wodi.provider.user.relation"></searchable>

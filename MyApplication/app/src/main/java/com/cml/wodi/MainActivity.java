@@ -16,9 +16,10 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         // set the content view
         setContentView(R.layout.activity_main);
-        ContentValues values = new ContentValues();
-        values.put(UserRelationContract.Columns.NAME, "11" + System.currentTimeMillis());
-        Uri result = getContentResolver().insert(UserRelationContract.CONTENT_URI, values);
-        Toast.makeText(this, "返回结果：" + ContentUris.parseId(result), Toast.LENGTH_LONG).show();
+        onSearchRequested();
+//        ContentValues values = new ContentValues();
+//        values.put(UserRelationContract.Columns.NAME, "11" + System.currentTimeMillis());
+//        Uri result = getContentResolver().insert(UserRelationContract.CONTENT_URI, values);
+//        Toast.makeText(this, "返回结果：" + ContentUris.parseId(result), Toast.LENGTH_LONG).show();
     }
 }
