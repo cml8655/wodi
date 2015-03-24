@@ -9,4 +9,9 @@
     <string name="confirm">确定</string>
     <string name="cancel">取消</string>
     <string name="search_hint">点击搜索</string>
+
+
+    <!--font icon strings-->
+    <string name="icon_search"> &#xe820;</string>
+    <string name="icon_delete"> &#xe809;</string>
 </resources>

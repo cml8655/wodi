@@ -9,7 +9,7 @@
     android:layout_height="match_parent">
 
 
-    <com.example.teamlab.myapplication.view.CircleImageView
+    <com.cml.wodi.view.CircleImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerInParent="true"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="default_bg">#123321</color>
-    <color name="default_ui_bg">#FFF</color>
+    <color name="color_whilte">#FFF</color>
     <color name="default_edit">#E08220</color>
 
 </resources>

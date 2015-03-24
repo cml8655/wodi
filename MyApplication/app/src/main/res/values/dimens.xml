@@ -13,4 +13,6 @@
     <dimen name="shadow_width">15dp</dimen>
 
     <integer name="num_cols">1</integer>
+    
+    <dimen name="text_size_20">20dp</dimen>
 </resources>
