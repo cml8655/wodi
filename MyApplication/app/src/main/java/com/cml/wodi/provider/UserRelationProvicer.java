@@ -1,5 +1,6 @@
 package com.cml.wodi.provider;
 
+import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.UriMatcher;
 import android.database.Cursor;
@@ -46,7 +47,7 @@ public class UserRelationProvicer extends BaseContentProvider {
     @Override
     public Uri insert(Uri uri, ContentValues values) {
         long id = db.insert(UserRelationContract.TABLLE, null, values);
-        return null;
+        return UserRelationContract.Builder.buildUri(id);
     }
 
     @Override

@@ -28,7 +28,7 @@ public class UserRelationContract {
     public static final String TABLLE = "t_user_relation";
 
     public static interface Columns extends BaseColumns {
-
+        String NAME = "name";
     }
 
     public static class Builder {
