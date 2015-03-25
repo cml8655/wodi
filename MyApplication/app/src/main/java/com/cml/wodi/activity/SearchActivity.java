@@ -1,6 +1,7 @@
 package com.cml.wodi.activity;
 
 import android.app.Activity;
+import android.app.SearchManager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -14,7 +15,9 @@ public class SearchActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Log.i("SearchActivity", getIntent().getAction());
+        Bundle bundle = getIntent().getExtras();
+        String query = bundle.getString(SearchManager.QUERY);
+
+        Log.i("SearchActivity", getIntent().getAction() + ",query:" + getIntent().getDataString());
     }
 }

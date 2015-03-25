@@ -1,14 +1,16 @@
 package com.cml.wodi.provider;
 
+import android.app.SearchManager;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.util.Log;
 
 
-public class UserRelationProvicer extends BaseContentProvider {
+public class UserRelationProvider extends BaseContentProvider {
 
     private SQLiteDatabase db;
 
@@ -30,11 +32,28 @@ public class UserRelationProvicer extends BaseContentProvider {
 
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
-        return db.query(UserRelationContract.TABLLE, projection, selection, selectionArgs, null, null, sortOrder);
+
+        Log.i("SearchActivity", "type:" + matcher.match(uri) + uri.toString());
+
+        if (null == projection) {
+            projection = new String[]{"*"};
+        }
+        Log.i("SearchActivity", selection + "," + selectionArgs[0] + "," + projection);
+//        Cursor result = db.rawQuery("select * from " + UserRelationContract.TABLLE + " where " + selection, selectionArgs);
+//        Cursor c = db.rawQuery("select count(*) from t_user_relation", null);
+
+
+        Cursor result = db.query(UserRelationContract.TABLLE, projection,
+                "suggest_text_1 is not null", null, null, null, null);
+        Log.i("SearchActivity", result.getCount() + ",," + result.getColumnCount());
+
+        return result;
     }
 
     @Override
     public String getType(Uri uri) {
+
+        Log.i("SearchActivity", "type:" + matcher.match(uri));
         switch (matcher.match(uri)) {
             case UserRelationContract.CODE_RELATION:
                 return UserRelationContract.CONTENT_TYPE;

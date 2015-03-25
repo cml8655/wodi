@@ -1,1 +1,11 @@
-create table t_user_relation (_id INTEGER  PRIMARY KEY AUTOINCREMENT,name text);
+create table t_user_relation (_id INTEGER  PRIMARY KEY AUTOINCREMENT,suggest_text_1 text,name text);
+INSERT into t_user_relation(suggest_text_1,name)VALUES('11','111');
+INSERT into t_user_relation(suggest_text_1,name)VALUES('22','22');
+INSERT into t_user_relation(suggest_text_1,name)VALUES('33','333');
+INSERT into t_user_relation(suggest_text_1,name)VALUES('44','444');
+INSERT into t_user_relation(suggest_text_1,name)VALUES('555','555');
+INSERT into t_user_relation(suggest_text_1,name)VALUES('66','666');
+INSERT into t_user_relation(suggest_text_1,name)VALUES('77','777');
+INSERT into t_user_relation(suggest_text_1,name)VALUES('88','888');
+INSERT into t_user_relation(suggest_text_1,name)VALUES('99','9999');
+INSERT into t_user_relation(suggest_text_1,name)VALUES('00','000');
