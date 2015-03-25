@@ -3,5 +3,9 @@
     <color name="default_bg">#123321</color>
     <color name="color_whilte">#FFF</color>
     <color name="default_edit">#E08220</color>
+    <color name="color_grey">#E3E3E3</color>
+    <color name="color_btn">#3FA9F5</color>
+    <color name="color_alert_bg">#3FA9F5</color>
+    <color name="color_tab_bg">#3FA9F5</color>
 
 </resources>
