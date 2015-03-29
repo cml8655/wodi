@@ -19,7 +19,7 @@
             android:layout_height="match_parent"></com.cml.wodi.view.SearchView>
     </LinearLayout>
 
-    <com.cml.wodi.view.GameDesktopView
+    <com.cml.wodi.view.DesktopView
         android:layout_width="match_parent"
         android:layout_marginTop="10dp"
         android:orientation="vertical"
@@ -133,7 +133,7 @@
             circle:border_width="2dp" />
 
 
-    </com.cml.wodi.view.GameDesktopView>
+    </com.cml.wodi.view.DesktopView>
 
     <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
