@@ -112,8 +112,6 @@ public abstract class DesktopView extends ViewGroup {
             measureChild(child, size, size);
         }
 
-//        childSize = getChildAt(0).getMeasuredWidth();
-
         setMeasuredDimension(size, size);
     }
 
