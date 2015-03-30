@@ -4,6 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="聊天信息"
+        android:gravity="center"
+        android:height="@dimen/title_height"
+        android:background="@color/text_color"
+        android:layout_height="wrap_content" />
+
     <ListView
         android:layout_width="match_parent"
         android:id="@android:id/list"

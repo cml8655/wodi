@@ -10,6 +10,7 @@ import com.cml.wodi.adapter.ChatInfoPagerAdapter;
 import com.cml.wodi.fragment.BaseListFragment;
 import com.cml.wodi.fragment.ChatInfoFragment;
 import com.cml.wodi.fragment.GamePlayFragment;
+import com.cml.wodi.transformer.DepthPageTransformer;
 import com.cml.wodi.view.CustomViewPager;
 import com.cml.wodi.view.DesktopView;
 import com.cml.wodi.view.adapter.GameViewAdapter;
@@ -36,5 +37,6 @@ public class GamePlayActivity extends BaseActivity {
         FragmentPagerAdapter pagerAdapter = new ChatInfoPagerAdapter(getSupportFragmentManager(), pagerData, this);
         viewPager.setAdapter(pagerAdapter);
         viewPager.setCurrentItem(1);
+        viewPager.setPageTransformer(true, new DepthPageTransformer());
     }
 }
