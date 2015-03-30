@@ -19,121 +19,13 @@
             android:layout_height="match_parent"></com.cml.wodi.view.SearchView>
     </LinearLayout>
 
-    <com.cml.wodi.view.DesktopView
+    <com.cml.wodi.view.GameDesktopView
         android:layout_width="match_parent"
+        android:id="@+id/desktopView"
         android:layout_marginTop="10dp"
         android:orientation="vertical"
         android:background="@drawable/circle_bg"
-        android:layout_height="match_parent">
-
-        <com.cml.wodi.view.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_launcher"
-            circle:border_color="#123456"
-            circle:border_width="2dp" />
-        <com.cml.wodi.view.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_launcher"
-            circle:border_color="#123456"
-            circle:border_width="2dp" />
-        <com.cml.wodi.view.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_launcher"
-            circle:border_color="#123456"
-            circle:border_width="2dp" />
-        <com.cml.wodi.view.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_launcher"
-            circle:border_color="#123456"
-            circle:border_width="2dp" />
-        <com.cml.wodi.view.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_launcher"
-            circle:border_color="#123456"
-            circle:border_width="2dp" />
-        <com.cml.wodi.view.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_launcher"
-            circle:border_color="#123456"
-            circle:border_width="2dp" />
-        <com.cml.wodi.view.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_launcher"
-            circle:border_color="#123456"
-            circle:border_width="2dp" />
-        <com.cml.wodi.view.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_launcher"
-            circle:border_color="#123456"
-            circle:border_width="2dp" />
-        <com.cml.wodi.view.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_launcher"
-            circle:border_color="#123456"
-            circle:border_width="2dp" />
-        <com.cml.wodi.view.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_launcher"
-            circle:border_color="#123456"
-            circle:border_width="2dp" />
-        <com.cml.wodi.view.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_launcher"
-            circle:border_color="#123456"
-            circle:border_width="2dp" />
-        <com.cml.wodi.view.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_launcher"
-            circle:border_color="#123456"
-            circle:border_width="2dp" />
-        <com.cml.wodi.view.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_launcher"
-            circle:border_color="#123456"
-            circle:border_width="2dp" />
-        <com.cml.wodi.view.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_launcher"
-            circle:border_color="#123456"
-            circle:border_width="2dp" />
-        <com.cml.wodi.view.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_launcher"
-            circle:border_color="#123456"
-            circle:border_width="2dp" />
-
-
-    </com.cml.wodi.view.DesktopView>
+        android:layout_height="match_parent"></com.cml.wodi.view.GameDesktopView>
 
     <android.support.v4.view.ViewPager
         android:layout_width="match_parent"

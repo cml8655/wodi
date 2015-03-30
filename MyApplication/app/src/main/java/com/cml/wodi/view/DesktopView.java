@@ -9,18 +9,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
+import com.cml.wodi.view.adapter.ViewAdapter;
 import com.nineoldandroids.animation.ObjectAnimator;
 
-public class DesktopView extends ViewGroup {
+import java.util.List;
+
+public abstract class DesktopView extends ViewGroup {
 
     private static final String TAG = "GameDesktopView";
 
     private int radius;
     private int padding = 10;
-    private int childSize;
-    private PointF center = new PointF();
-    private BaseAdapter adapter;
+    protected int childSize;
+    protected PointF center = new PointF();
+
     private DataSetObserver dataSetObserver = new GameDataObserver();
+    protected ViewAdapter adapter;
 
     private class GameDataObserver extends DataSetObserver {
         @Override
@@ -32,6 +36,7 @@ public class DesktopView extends ViewGroup {
         public void onInvalidated() {
         }
     }
+
 
     public DesktopView(Context context) {
         super(context);
@@ -45,14 +50,6 @@ public class DesktopView extends ViewGroup {
         super(context, attrs, defStyleAttr);
     }
 
-    private OnClickListener listener = new OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            ObjectAnimator.ofFloat(v, "x", v.getX(), center.x - childSize / 2).setDuration(2000).start();
-            ObjectAnimator.ofFloat(v, "y", v.getY(), center.y - childSize / 2).setDuration(2000).start();
-            DesktopView.this.requestLayout();
-        }
-    };
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
@@ -69,7 +66,7 @@ public class DesktopView extends ViewGroup {
             View v = getChildAt(i);
 
             int width = v.getMeasuredWidth();
-            int circleR = radius - width / 2;
+            int circleR = radius  - radius / 4 ;
             int halfWidth = width / 2;
 
             double radian = changeAngelToRadian(angle * i);
@@ -78,7 +75,6 @@ public class DesktopView extends ViewGroup {
             int centerY = (int) (radius + circleR * Math.cos(radian)) + padding;
 
             v.layout(centerX - halfWidth, centerY - halfWidth, centerX + halfWidth, centerY + halfWidth);
-            v.setOnClickListener(listener);
         }
 
     }
@@ -99,7 +95,7 @@ public class DesktopView extends ViewGroup {
         radius = (size - padding * 2) / 2;
 
         //子元素大小
-        childSize = radius / 2;
+        childSize = radius / 3;
 
         //设置圆心位置
         center.y = center.x = size / 2;
@@ -107,20 +103,42 @@ public class DesktopView extends ViewGroup {
         int count = getChildCount();
 
         for (int i = 0; i < count; i++) {
-            measureChild(getChildAt(i), size, size);
+
+            View child = getChildAt(i);
+            //重设大小
+            LayoutParams params = new LayoutParams(childSize, childSize);
+            child.setLayoutParams(params);
+
+            measureChild(child, size, size);
         }
 
-        childSize = getChildAt(0).getMeasuredWidth();
+//        childSize = getChildAt(0).getMeasuredWidth();
 
         setMeasuredDimension(size, size);
     }
 
-    public BaseAdapter getAdapter() {
+    /**
+     * 移除已有的组件，重新设置组件
+     */
+    protected void relayout() {
+
+        removeAllViews();
+
+        for (View v : getChildViews()) {
+            this.addView(v);
+        }
+        requestLayout();
+    }
+
+    protected abstract List<View> getChildViews();
+
+    public ViewAdapter getAdapter() {
         return adapter;
     }
 
-    public void setAdapter(BaseAdapter adapter) {
+    public void setAdapter(ViewAdapter adapter) {
         this.adapter = adapter;
-        this.adapter.registerDataSetObserver(dataSetObserver);
+        this.adapter.setDataSetObserver(dataSetObserver);
+        relayout();
     }
 }
