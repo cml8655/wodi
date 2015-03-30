@@ -3,15 +3,15 @@
     package="com.cml.wodi">
 
     <application
+        android:name=".ExampleApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:name="com.cml.wodi.ExampleApplication"
         android:label="@string/app_name"
         android:theme="@style/CustomTheme.ActionBar">
         <activity
             android:name=".MainActivity"
-            android:theme="@style/CustomTheme.NoTitleBar"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/CustomTheme.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,23 +22,27 @@
                 android:name="android.app.default_searchable"
                 android:value="com.cml.wodi.activity.SearchActivity" />
         </activity>
-
         <activity
             android:name=".ModalActivity"
-            android:theme="@style/CustomTheme.ActionBar.Modal"></activity>
-
+            android:theme="@style/CustomTheme.ActionBar.Modal" />
         <activity android:name=".activity.SearchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
 
         <provider
-            android:authorities="com.cml.wodi.provider.user.relation"
-            android:name=".provider.UserRelationProvider"></provider>
+            android:name=".provider.UserRelationProvider"
+            android:authorities="com.cml.wodi.provider.user.relation" />
+
+        <activity
+            android:name=".activity.GamePlayActivity"
+            android:label="@string/title_activity_game_play">
+            </activity>
     </application>
 
 </manifest>

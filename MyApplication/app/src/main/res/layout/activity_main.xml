@@ -19,13 +19,11 @@
             android:layout_height="match_parent"></com.cml.wodi.view.SearchView>
     </LinearLayout>
 
-    <com.cml.wodi.view.GameDesktopView
+    <Button
         android:layout_width="match_parent"
-        android:id="@+id/desktopView"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical"
-        android:background="@drawable/circle_bg"
-        android:layout_height="match_parent"></com.cml.wodi.view.GameDesktopView>
+        android:text="开始游戏"
+        android:onClick="startGame"
+        android:layout_height="wrap_content" />
 
     <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
