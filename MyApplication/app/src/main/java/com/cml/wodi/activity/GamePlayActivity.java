@@ -16,6 +16,7 @@ import com.cml.wodi.view.DesktopView;
 import com.cml.wodi.view.adapter.GameViewAdapter;
 import com.cml.wodi.view.adapter.ViewAdapter;
 import com.cml.wodi.view.model.GameViewItem;
+import com.easemob.chat.EMConversation;
 
 import java.util.ArrayList;
 import java.util.List;

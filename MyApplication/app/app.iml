@@ -113,6 +113,7 @@
     <orderEntry type="library" exported="" name="appcompat-v7-21.0.2" level="project" />
     <orderEntry type="library" exported="" name="materialish-progress-1.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="hamcrest-core-1.1" level="project" />
+    <orderEntry type="library" exported="" name="easemobchat_2.1.6" level="project" />
   </component>
 </module>
 
