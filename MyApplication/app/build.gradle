@@ -42,20 +42,20 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    productFlavors {
-        dev {
-            applicationId 'com.example.teamlab.myapplication.dev'
-            signingConfig signingConfigs.debug
-        }
-        staging {
-            signingConfig signingConfigs.debug
-            applicationId 'com.example.teamlab.myapplication.staging'
-        }
-        product {
-            applicationId 'com.example.teamlab.myapplication'
-            signingConfig signingConfigs.debug
-        }
-    }
+//    productFlavors {
+//        dev {
+//            applicationId 'com.example.teamlab.myapplication.dev'
+//            signingConfig signingConfigs.debug
+//        }
+//        staging {
+//            signingConfig signingConfigs.debug
+//            applicationId 'com.example.teamlab.myapplication.staging'
+//        }
+//        product {
+//            applicationId 'com.example.teamlab.myapplication'
+//            signingConfig signingConfigs.debug
+//        }
+//    }
     packagingOptions {
         exclude 'META-INF/notice.txt'
         exclude 'META-INF/license.txt'
@@ -68,7 +68,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.2'
     compile 'com.android.support:support-v4:21.0.2'
     compile 'cn.pedant.sweetalert:library:1.3'
-    compile 'com.mcxiaoke.volley:library:1.0.+'
+    compile 'com.mcxiaoke.volley:library:1.0.15'
 }
 
 
